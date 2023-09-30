@@ -17,3 +17,22 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Person {
+  age       Int?
+  createdAt DateTime @default(now())
+  firstname String?
+  id        String   @id @default(cuid())
+  lastname  String?
+  subject   Subject? @relation(fields: [subjectId], references: [id])
+  subjectId String?
+  updatedAt DateTime @updatedAt
+}
+
+model Subject {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  name      String?
+  students  Person[]
+  updatedAt DateTime @updatedAt
+}
