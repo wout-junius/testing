@@ -17,6 +17,10 @@ import { SubjectList } from "./subject/SubjectList";
 import { SubjectCreate } from "./subject/SubjectCreate";
 import { SubjectEdit } from "./subject/SubjectEdit";
 import { SubjectShow } from "./subject/SubjectShow";
+import { YearList } from "./year/YearList";
+import { YearCreate } from "./year/YearCreate";
+import { YearEdit } from "./year/YearEdit";
+import { YearShow } from "./year/YearShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -63,6 +67,13 @@ const App = (): React.ReactElement => {
           edit={SubjectEdit}
           create={SubjectCreate}
           show={SubjectShow}
+        />
+        <Resource
+          name="Year"
+          list={YearList}
+          edit={YearEdit}
+          create={YearCreate}
+          show={YearShow}
         />
       </Admin>
     </div>

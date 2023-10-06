@@ -36,3 +36,10 @@ model Subject {
   students  Person[]
   updatedAt DateTime @updatedAt
 }
+
+model Year {
+  createdAt DateTime @default(now())
+  date      DateTime
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
