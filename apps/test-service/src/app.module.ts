@@ -4,6 +4,7 @@ import { MorganInterceptor, MorganModule } from "nest-morgan";
 import { UserModule } from "./user/user.module";
 import { PersonModule } from "./person/person.module";
 import { SubjectModule } from "./subject/subject.module";
+import { YearModule } from "./year/year.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -23,6 +24,7 @@ import { AuthModule } from "./auth/auth.module";
     UserModule,
     PersonModule,
     SubjectModule,
+    YearModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,
